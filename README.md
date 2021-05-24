@@ -1,2 +1,2 @@
-# TakeControl
-App de controle financeiro
+# Take Control
+App de controle financeiro desenvolvido em Kotlin
