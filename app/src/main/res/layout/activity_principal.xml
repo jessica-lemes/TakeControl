@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/tela_padrao"
+    android:background="@color/azul_claro"
     android:padding="10dp"
     tools:context=".UI.PrincipalActivity">
 
@@ -19,7 +19,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
 
     <LinearLayout
@@ -41,7 +40,7 @@
             android:layout_gravity="center"
             android:gravity="center_vertical"
             android:text="Saldo Total"
-            android:textColor="@color/Cor1"
+            android:textColor="@color/azul"
             android:textStyle="bold" />
 
         <TextView
@@ -105,8 +104,8 @@
         android:elevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:menu_colorNormal="@color/Cor1"
-        app:menu_colorPressed="@color/Cor2"
+        app:menu_colorNormal="@color/azul"
+        app:menu_colorPressed="@color/azul_claro"
         fab:menu_icon="@drawable/ic_mais_cinza_24">
 
         <com.github.clans.fab.FloatingActionButton
@@ -125,10 +124,9 @@
             android:layout_height="wrap_content"
             android:onClick="adicionarReceita"
             android:src="@drawable/ic_mais_cinza_24"
-            app:fab_colorNormal="@color/Cor3"
+            app:fab_colorNormal="@color/verde_agua"
             app:fab_label="Receita"
-            app:fab_size="mini">
-        </com.github.clans.fab.FloatingActionButton>
+            app:fab_size="mini"></com.github.clans.fab.FloatingActionButton>
     </com.github.clans.fab.FloatingActionMenu>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

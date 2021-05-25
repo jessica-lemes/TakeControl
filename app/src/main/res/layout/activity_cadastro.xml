@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/TelaCad"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/TelaCad"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/tela_cadastro"
+    android:background="@color/azul_claro"
     tools:context=".UI.CadastroActivity">
 
     <EditText
@@ -30,8 +30,8 @@
         android:layout_width="379dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
         android:drawableEnd="@drawable/ic_person_cinza_24"
         android:ems="10"
         android:hint="@string/placeholder_CPF"
@@ -47,8 +47,8 @@
         android:layout_width="379dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
         android:drawableEnd="@drawable/ic_email_cinza_24"
         android:ems="10"
         android:hint="@string/placeholder_email"
@@ -64,8 +64,8 @@
         android:layout_width="379dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
         android:drawableEnd="@drawable/ic_senha_cinza_24"
         android:ems="10"
         android:hint="@string/placeholder_senha"
@@ -75,13 +75,14 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputEmailP" />
+
     <EditText
         android:id="@+id/inputConfirmaSenha"
         android:layout_width="379dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
         android:drawableEnd="@drawable/ic_senha_cinza_24"
         android:ems="10"
         android:hint="@string/placeholder_confirmaSenha"
@@ -94,10 +95,14 @@
 
     <Button
         android:id="@+id/btnCadastrar"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
         android:text="Cadastrar"
+        android:textSize="20sp"
+        app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
