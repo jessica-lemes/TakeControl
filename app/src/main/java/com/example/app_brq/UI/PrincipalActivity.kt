@@ -1,13 +1,11 @@
 package com.example.app_brq.UI
 
 import android.content.Intent
-import android.icu.text.Collator.getDisplayName
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
-import androidx.annotation.RequiresApi
+import androidx.core.view.get
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.app_brq.R
@@ -17,6 +15,7 @@ import com.github.clans.fab.FloatingActionMenu
 import com.prolificinteractive.materialcalendarview.MaterialCalendarView
 import com.prolificinteractive.materialcalendarview.OnMonthChangedListener
 import java.text.NumberFormat
+import java.time.Month
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -27,6 +26,7 @@ class PrincipalActivity : AppCompatActivity() {
     lateinit var textSaldo: TextView
     lateinit var recyclerView: RecyclerView
     lateinit var floatActionMenu: FloatingActionMenu
+    lateinit var calendario: Calendar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -75,7 +75,11 @@ class PrincipalActivity : AppCompatActivity() {
 
         })
     }
-//
+
+    fun filtraListaPorMes(){
+
+    }
+
 //    fun atualizaRecyclerTeste(mes: Int){
 //        val mes = calendario.get(Calendar.MONTH)
 //        val lista: ArrayList<Movimentacao> = ListaGlobal.retornaListaMovimentacao()
@@ -94,7 +98,7 @@ class PrincipalActivity : AppCompatActivity() {
         var soma = 0.0
         var lista: ArrayList<Movimentacao> = ListaGlobal.retornaListaMovimentacao()
         for (item in lista) {
-            soma = soma + item.valor
+            soma += item.valor
         }
         val country = "BR"
         val language = "pt"

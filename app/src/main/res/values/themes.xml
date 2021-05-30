@@ -2,10 +2,10 @@
     <!-- Base application theme. -->
     <style name="Theme.App_BRQ" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/azul</item>
-        <item name="colorPrimaryVariant">@color/azul_claro</item>
+        <item name="colorPrimary">@color/cyan</item>
+        <item name="colorPrimaryVariant">@color/cyan_light</item>
         <item name="colorOnPrimary">@color/white</item>
-        <item name="colorAccent">@color/verde_agua</item>
+        <item name="colorAccent">@color/cyan_dark</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/azul</item>
         <item name="colorSecondaryVariant">@color/azul_claro</item>
