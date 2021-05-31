@@ -2,22 +2,17 @@ package com.example.app_brq.UI
 
 import android.app.DatePickerDialog
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.DatePicker
 import android.widget.TextView
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.app_brq.R
 import com.example.app_brq.UI.adapter.AdapterMovimentacoes
 import com.example.app_brq.UI.model.Movimentacao
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import java.text.DateFormat
-import java.text.NumberFormat
-import java.time.LocalDate
-import java.time.format.DateTimeFormatter
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -73,7 +68,7 @@ class ReceitasActivity : AppCompatActivity() {
         val descricao = editTextDescricaoReceita.text
 
 
-        val dados = Movimentacao(valorString.toDouble(), data.toString() ,categoria.toString(),descricao.toString() ,"Receita")
+        val dados = Movimentacao(valorString.toDouble(), data.toString(), categoria.toString(), descricao.toString(), "Receita")
         dados.adicionaMovimentacao()
         limpaCampos()
         atualizaRecycler()
@@ -95,9 +90,9 @@ class ReceitasActivity : AppCompatActivity() {
 
         editTextDataReceita.setOnClickListener {
             val datePicker = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { DatePicker, ano, mes, dia ->
-                editTextDataReceita.text = ""+dia+"/"+(mes+1)+"/"+ano
+                editTextDataReceita.text = "" + dia + "/" + (mes + 1) + "/" + ano
                 //dataCalendario.set(ano,mes,dia)
-            }, ano, mes, dia )
+            }, ano, mes, dia)
 
             datePicker.show()
         }

@@ -2,20 +2,18 @@ package com.example.app_brq.UI
 
 import android.app.DatePickerDialog
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.app_brq.R
 import com.example.app_brq.UI.adapter.AdapterMovimentacoes
 import com.example.app_brq.UI.model.Movimentacao
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import java.text.NumberFormat
-import java.time.LocalDate
-import java.time.format.DateTimeFormatter
+import java.text.DateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -68,7 +66,8 @@ class DespesasActivity : AppCompatActivity() {
         val categoria = editTextCategoriaDespesa.text
         val descricao = editTextDescricaoDespesa.text
 
-        val dados = Movimentacao( valor.toDouble(), data.toString(), categoria.toString(), descricao.toString(), "Despesa")
+
+        val dados = Movimentacao(valor.toDouble(), data.toString(), categoria.toString(), descricao.toString(), "Despesa")
         dados.adicionaMovimentacao()
         limpaCampos()
         atualizaRecycler()

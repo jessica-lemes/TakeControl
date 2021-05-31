@@ -3,6 +3,7 @@ package com.example.app_brq.UI
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.TextView
 import androidx.core.view.get
@@ -26,7 +27,7 @@ class PrincipalActivity : AppCompatActivity() {
     lateinit var textSaldo: TextView
     lateinit var recyclerView: RecyclerView
     lateinit var floatActionMenu: FloatingActionMenu
-    lateinit var calendario: Calendar
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,6 +54,7 @@ class PrincipalActivity : AppCompatActivity() {
         configuraCalendarView()
         atualizaRecycler()
         atualizaSaldo()
+        dataAtual()
     }
 
     fun adicionarReceita(view: View){
@@ -71,22 +73,22 @@ class PrincipalActivity : AppCompatActivity() {
         val meses = arrayOf("Janeiro", "Fevereiro", "Março","Abril","Maio","Junho", "Julho","Agosto" ,"Setembro", "Outubro", "Novembro", "Dezembro" )
         calendarView.setTitleMonths(meses)
         calendarView.setOnMonthChangedListener(OnMonthChangedListener { widget, date ->
-            //atualizaRecyclerTeste(date.month)
-
+            atualizaRecycler(date.month+1, date.year)
         })
     }
 
-    fun filtraListaPorMes(){
-
+    fun atualizaRecycler(mes: Int, ano: Int){
+        val lista: ArrayList<Movimentacao> = ListaGlobal.retornaListaMovimentacao()
+        var listaFiltrada : ArrayList<Movimentacao> = ArrayList()
+        for ( item in lista){
+            var dataSplit = item.data.split("/")
+            if (dataSplit[1].toInt() == mes && dataSplit[2].toInt() == ano){
+                listaFiltrada.add(item)
+            }
+        }
+        recyclerView.adapter = AdapterMovimentacoes(listaFiltrada, this)
+        recyclerView.layoutManager = LinearLayoutManager(this)
     }
-
-//    fun atualizaRecyclerTeste(mes: Int){
-//        val mes = calendario.get(Calendar.MONTH)
-//        val lista: ArrayList<Movimentacao> = ListaGlobal.retornaListaMovimentacao()
-//        val listaFiltradaPorMes = lista.filter { it. }
-//        recyclerView.adapter = AdapterMovimentacoes(lista, this)
-//        recyclerView.layoutManager = LinearLayoutManager(this)
-//    }
 
     fun atualizaRecycler(){
         val lista: ArrayList<Movimentacao> = ListaGlobal.retornaListaMovimentacao()
@@ -105,6 +107,10 @@ class PrincipalActivity : AppCompatActivity() {
         val somaFormatada = NumberFormat.getCurrencyInstance(Locale(language, country)).format(soma)
 
         textSaldo.text  = somaFormatada
+    }
 
+    fun dataAtual(){
+        var datateste = calendarView.currentDate
+        atualizaRecycler(datateste.month+1, datateste.year)
     }
 }
