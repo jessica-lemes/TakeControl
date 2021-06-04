@@ -57,17 +57,30 @@ class ReceitasActivity : AppCompatActivity() {
         atualizaRecycler()
     }
 
+
     @RequiresApi(Build.VERSION_CODES.O)
-    fun mostraDadoOnClick(view: View){
+    fun enviaDados(view: View){
 
         val valor = editTextValorReceita.text
-        val valorString = valor.toString()
         val data = editTextDataReceita.text
-        val categoria = editTextCategoriaReceita.text
-        val descricao = editTextDescricaoReceita.text
+        var categoria = editTextCategoriaReceita.text
+        var descricao = editTextDescricaoReceita.text
+        lateinit var valorString :String
 
+        if (valor.isNullOrEmpty()) {
+            editTextValorReceita.error = "Informe um valor"
+        }else if (data.isNullOrEmpty()) {
+            editTextDataReceita.error = "Informe uma data"
+        }else if (categoria.isNullOrEmpty()) {
+            categoria = ""
+        }else if (descricao.isNullOrEmpty()) {
+            descricao = ""
+        }
+        else{
+            valorString = valor.toString()
+        }
 
-        val dados = Movimentacao(valorString.toDouble(), data.toString(), categoria.toString(), descricao.toString(), "Receita")
+       val dados = Movimentacao(valor.toString().toDouble(), data.toString(), categoria.toString(), descricao.toString(), "Receita")
         dados.adicionaMovimentacao()
         limpaCampos()
         atualizaRecycler()
@@ -90,7 +103,6 @@ class ReceitasActivity : AppCompatActivity() {
         editTextDataReceita.setOnClickListener {
             val datePicker = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { DatePicker, ano, mes, dia ->
                 editTextDataReceita.text = "" + dia + "/" + (mes + 1) + "/" + ano
-                //dataCalendario.set(ano,mes,dia)
             }, ano, mes, dia)
 
             datePicker.show()
@@ -103,4 +115,6 @@ class ReceitasActivity : AppCompatActivity() {
         editTextCategoriaReceita.text = null
         editTextDescricaoReceita.text = null
     }
+
+
 }

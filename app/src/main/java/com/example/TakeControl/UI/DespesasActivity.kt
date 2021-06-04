@@ -59,7 +59,7 @@ class DespesasActivity : AppCompatActivity() {
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
-    fun mostraDadoOnClick(view: View) {
+    fun enviaDados(view: View) {
         val valor = "-" + editTextValorDespesa.text
         val data = editTextDataDespesa.text
         val categoria = editTextCategoriaDespesa.text

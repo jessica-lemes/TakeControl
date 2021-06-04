@@ -65,14 +65,6 @@ class LoginActivity() : AppCompatActivity() {
             } else{
                 loginFirebase(email, senha)
             }
-//            else if (email != "jessica@gmail.com" || senha != "123") {
-//                Toast.makeText(this,"E-mail e senha não conferem!", Toast.LENGTH_SHORT).show();}
-//
-//                else {
-//                Intent(this, PrincipalActivity::class.java).apply {
-//                    startActivity(this)
-//                }
-//            }
         }
     }
 

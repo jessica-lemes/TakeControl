@@ -100,12 +100,12 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:clickable="true"
-        android:onClick="mostraDadoOnClick"
+        android:focusable="true"
+        android:onClick="enviaDados"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_check_24"
-        android:focusable="true" />
+        app:srcCompat="@drawable/ic_check_24" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerReceitas"
