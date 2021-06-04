@@ -3,12 +3,14 @@ plugins {
     id 'kotlin-android'
 }
 
+apply plugin: 'com.google.gms.google-services'
+
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.example.app_brq"
+        applicationId "com.example.TakeControl"
         minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
@@ -45,4 +47,9 @@ dependencies {
 
     implementation 'com.github.clans:fab:1.6.4'
     implementation "com.github.prolificinteractive:material-calendarview:1.4.3"
+
+    //Firebase
+    implementation platform('com.google.firebase:firebase-bom:28.0.1')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-auth-ktx'
 }

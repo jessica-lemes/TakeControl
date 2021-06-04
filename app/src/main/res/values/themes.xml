@@ -2,12 +2,13 @@
     <!-- Base application theme. -->
     <style name="Theme.App_BRQ" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/Cor4</item>
-        <item name="colorPrimaryVariant">@color/Cor1</item>
+        <item name="colorPrimary">@color/cyan</item>
+        <item name="colorPrimaryVariant">@color/cyan_light</item>
         <item name="colorOnPrimary">@color/white</item>
+        <item name="colorAccent">@color/cyan_dark</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/Cor2</item>
-        <item name="colorSecondaryVariant">@color/Cor5</item>
+        <item name="colorSecondary">@color/azul</item>
+        <item name="colorSecondaryVariant">@color/azul_claro</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
