@@ -1,4 +1,4 @@
-package com.example.app_brq
+package com.example.TakeControl
 
 import org.junit.Test
 

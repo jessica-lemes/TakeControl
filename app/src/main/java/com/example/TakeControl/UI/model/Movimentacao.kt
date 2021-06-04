@@ -1,7 +1,6 @@
-package com.example.app_brq.UI.model
-import com.example.app_brq.UI.ListaGlobal
+package com.example.TakeControl.UI.model
+import com.example.TakeControl.UI.ListaGlobal
 import java.io.Serializable
-import java.util.*
 
 class Movimentacao(
         val valor: Double,

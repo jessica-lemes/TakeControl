@@ -1,10 +1,10 @@
-package com.example.app_brq.UI
+package com.example.TakeControl.UI
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.example.app_brq.R
+import com.example.TakeControl.R
 
 class SplashActivity : AppCompatActivity() {
     lateinit var clickSplash: View

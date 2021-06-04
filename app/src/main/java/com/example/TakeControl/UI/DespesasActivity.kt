@@ -1,4 +1,4 @@
-package com.example.app_brq.UI
+package com.example.TakeControl.UI
 
 import android.app.DatePickerDialog
 import android.os.Build
@@ -9,11 +9,10 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.app_brq.R
-import com.example.app_brq.UI.adapter.AdapterMovimentacoes
-import com.example.app_brq.UI.model.Movimentacao
+import com.example.TakeControl.R
+import com.example.TakeControl.UI.adapter.AdapterMovimentacoes
+import com.example.TakeControl.UI.model.Movimentacao
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import java.text.DateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 

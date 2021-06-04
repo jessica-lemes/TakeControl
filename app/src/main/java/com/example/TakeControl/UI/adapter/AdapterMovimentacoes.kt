@@ -1,12 +1,12 @@
-package com.example.app_brq.UI.adapter
+package com.example.TakeControl.UI.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.app_brq.R
-import com.example.app_brq.UI.adapter.viewholder.ViewHolderMovimentacao
-import com.example.app_brq.UI.model.Movimentacao
+import com.example.TakeControl.R
+import com.example.TakeControl.UI.adapter.viewholder.ViewHolderMovimentacao
+import com.example.TakeControl.UI.model.Movimentacao
 import java.text.NumberFormat
 import java.util.*
 import kotlin.collections.ArrayList

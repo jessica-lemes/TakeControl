@@ -1,9 +1,9 @@
-package com.example.app_brq.UI.adapter.viewholder
+package com.example.TakeControl.UI.adapter.viewholder
 
 import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.app_brq.R
+import com.example.TakeControl.R
 
 class ViewHolderMovimentacao(view: View): RecyclerView.ViewHolder(view) {
 

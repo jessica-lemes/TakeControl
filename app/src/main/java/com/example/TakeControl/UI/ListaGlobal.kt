@@ -1,6 +1,6 @@
-package com.example.app_brq.UI
+package com.example.TakeControl.UI
 import android.app.Application
-import com.example.app_brq.UI.model.Movimentacao
+import com.example.TakeControl.UI.model.Movimentacao
 
 
 class ListaGlobal : Application() {

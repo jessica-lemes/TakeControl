@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1074678256205",
+    "project_id": "takecontrol-8cd4f",
+    "storage_bucket": "takecontrol-8cd4f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1074678256205:android:02eb2e9a418cadf905c204",
+        "android_client_info": {
+          "package_name": "com.example.TakeControl"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1074678256205-8jc0vb6m997ajpanpiu6gu59g532nhhu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnw49MuG2x_wbi4PY8FLuS5eWIXspj9MY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1074678256205-8jc0vb6m997ajpanpiu6gu59g532nhhu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

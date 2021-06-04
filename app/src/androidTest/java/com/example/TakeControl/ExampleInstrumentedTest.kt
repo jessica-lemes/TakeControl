@@ -1,4 +1,4 @@
-package com.example.app_brq
+package com.example.TakeControl
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
